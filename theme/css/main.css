@@ -1749,6 +1749,7 @@ body:not(.post-template) .post-title {
 		margin-left: -50px;
 		width: 100px;
 		height: 100px;
+		padding: 2px;
 	}
 
 	.header-links {
@@ -1897,6 +1898,7 @@ body:not(.post-template) .post-title {
 		margin-left: -40px;
 		width: 80px;
 		height: 80px;
+		padding: 2px;
 	}
 
 	.header-links {
