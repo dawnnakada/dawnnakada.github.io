@@ -22,75 +22,8 @@
 
 
 /* ==========================================================================
-   1. Icons - Sets up the icon font and respective classes
+   1. Icons
    ========================================================================== */
-
-/* Import the font file with the icons in it */
-@font-face {
-	font-family: "casper-icons";
-	src:url("../fonts/casper-icons.eot?v=1");
-	src:url("../fonts/casper-icons.eot?v=1#iefix") format("embedded-opentype"),
-		url("../fonts/casper-icons.woff?v=1") format("woff"),
-		url("../fonts/casper-icons.ttf?v=1") format("truetype"),
-		url("../fonts/casper-icons.svg?v=1#icons") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
-
-/* Apply these base styles to all icons */
-[class^="icon-"]:before, [class*=" icon-"]:before {
-	font-family: "casper-icons", "Open Sans", sans-serif;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	text-decoration: none !important;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-/* Each icon is created by inserting the correct character into the
-   content of the :before pseudo element. */
-.icon-ghost:before {
-	content: "\f600";
-}
-.icon-feed:before {
-	content: "\f601";
-}
-.icon-twitter:before {
-	content: "\f602";
-	font-size: 1.1em;
-}
-.icon-google-plus:before {
-	content: "\f603";
-}
-.icon-facebook:before {
-	content: "\f604";
-}
-.icon-arrow-left:before {
-	content: "\f605";
-}
-.icon-stats:before {
-	content: "\f606";
-}
-.icon-location:before {
-	content: "\f607";
-	margin-left: -3px; /* Tracking fix */
-}
-.icon-link:before {
-	content: "\f608";
-}
-.icon-menu:before {
-	content: "\f609";
-}
-/*
-	IMPORTANT: When making any changes to the icon font, be sure to increment
-	the version number by 1 in the @font-face rule. `?v=1` becomes `?v=2`
-	This forces browsers to download the new font file.
-*/
-
 
 /* ==========================================================================
    2. General - Setting up some base styles
@@ -461,15 +394,6 @@ margin on the iframe, cause it breaks stuff. */
 			transition: transform 0.5s ease;
 }
 
-body.nav-opened .site-wrapper {
-	overflow-x: hidden;
-	-webkit-transform: translate3D(-240px, 0, 0);
-		-ms-transform: translate3D(-240px, 0, 0);
-			transform: translate3D(-240px, 0, 0);
-	-webkit-transition: -webkit-transform 0.3s ease;
-			transition: transform 0.3s ease;
-}
-
 
 /* ==========================================================================
    4. General - The main styles for the theme
@@ -507,200 +431,70 @@ body.nav-opened .site-wrapper {
 	margin: 0 0 30px 0;
 }
 
-.main-nav a {
-	text-decoration: none;
-	font-family: 'Open Sans', sans-serif;
-}
-
 /* Navigation */
-body.nav-opened .nav-cover {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 240px;
-	bottom: 0;
-	z-index: 200;
-}
-
 .nav {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 5;
-	width: 240px;
-	opacity: 0;
-	background: #111;
-	margin-bottom: 0;
-	text-align: left;
-	overflow-y: auto;
-	-webkit-transition: -webkit-transform 0.5s ease,
-						opacity 0.3s ease 0.7s;
-			transition: transform 0.5s ease,
-						opacity 0.3s ease 0.7s;
-}
-
-body.nav-closed .nav {
-	-webkit-transform: translate3D(97px, 0, 0);
-		-ms-transform: translate3D(97px, 0, 0);
-			transform: translate3D(97px, 0, 0);
-}
-
-body.nav-opened .nav {
-	opacity: 1;
-	-webkit-transition: -webkit-transform 0.3s ease,
-						opacity 0s ease 0s;
-			transition: transform 0.3s ease,
-						opacity 0s ease 0s;
-	-webkit-transform: translate3D(0, 0, 0);
-		-ms-transform: translate3D(0, 0, 0);
-			transform: translate3D(0, 0, 0);
-}
-
-.nav-title {
 	position: absolute;
-	top: 45px;
-	left: 30px;
-	font-size: 16px;
-	font-weight: 100;
-	text-transform: uppercase;
-	color: #fff;
+	top: 4px;
+	right: 8px;
+	cursor: default;
 }
 
-.nav-close {
-	position: absolute;
-	top: 38px;
-	right: 25px;
-	width: 20px;
-	height: 20px;
-	padding: 0;
-	font-size: 10px;
-}
-
-.nav-close:focus {
-	outline: 0;
-}
-
-.nav-close:before,
-.nav-close:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	width: 20px;
-	height: 1px;
-	background: rgb(150,150,150);
-	top: 15px;
-	-webkit-transition: background 0.15s ease;
-			transition: background 0.15s ease;
-}
-
-.nav-close:before {
-	-webkit-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-			transform: rotate(45deg);
-}
-
-.nav-close:after {
-	-webkit-transform: rotate(-45deg);
-		-ms-transform: rotate(-45deg);
-			transform: rotate(-45deg);
-}
-
-.nav-close:hover:before,
-.nav-close:hover:after {
-	background: rgb(255,255,255);
-}
-
-.nav ul {
-	padding: 90px 9% 5%;
-	list-style: none;
-	counter-reset: item;
-}
-
-.nav li:before {
-	display: block;
-	float: right;
-	padding-right: 4%;
-	padding-left: 5px;
-	text-align: right;
-	font-size: 1.2rem;
-	vertical-align: bottom;
-	color: #B8B8B8;
-	content: counter(item, lower-roman);
-	counter-increment: item;
-}
-.nav li {
-	margin: 0;
-}
-.nav li a {
-	text-decoration: none;
-	line-height: 1.4;
-	font-size: 1.4rem;
-	display: block;
-	padding: 0.6rem 4%;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-.nav li a:after {
+.nav a {
 	display: inline-block;
-	content: " .......................................................";
-	color: rgba(255,255,255,0.2);
-	margin-left: 5px;
-}
-.nav .nav-current:before {
-	color: #fff;
-}
-.nav .nav-current a:after {
-	content: " ";
-	border-bottom: rgba(255,255,255,0.5) 1px solid;
-	width: 100%;
-	height: 1px;
-}
-
-.nav a:link,
-.nav a:visited {
-	color: #B8B8B8;
-}
-
-.nav li.nav-current a,
-.nav a:hover,
-.nav a:active,
-.nav a:focus {
-	color: #fff;
-}
-
-a.subscribe-button {
-	display: block;
-	position: absolute;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	right: 2.4%;
-	top: 14%;
-	width: 60px;
 	color: #FFFFFF;
-	text-align: left;
-	font-size: 14px;
 	font-family: "Open Sans", sans-serif;
-	text-transform: uppercase;
+	font-size: 14px;
+	text-transform: lowercase;
 	text-decoration: none;
 	border-bottom: 0;
 	line-height: 28px;
+	height: 28px;
 	border-radius: 3px;
-	background-color: rgba(0, 0, 0, 0.7);
-	opacity: 0.8;
-	transition: all ease 0.3s;
-}
-.subscribe-button:before {
-	font-size: 12px;
-	color: #FB9D3A;
-	margin: 0 5px 0 9px;
-}
-.subscribe-button:hover {
+	background-color: rgba(0, 0, 0, 0.6);
 	opacity: 1;
+	letter-spacing: 0;
+	margin: 0 1px;
 }
 
+a.archives-button {
+	width: 94px;
+}
+.archives-button:hover {
+	background-color: rgba(58, 108, 183, 0.6);
+}
+.archives-button svg {
+	width: 15px;
+	height: 15px;
+	fill: #FFFFFF;
+	vertical-align: -3px;
+	margin: 0 2px 0 0;
+}
+a.twitter-button {
+	width: 83px;
+}
+.twitter-button:hover {
+	background-color: rgba(85, 172, 238, 0.6);
+}
+.twitter-button svg {
+	width: 18px;
+	height: 18px;
+	fill: #FFFFFF;
+	vertical-align: -4px;
+	margin: 0 1px 0 0;
+}
+a.feed-button {
+	width: 68px;
+}
+.feed-button:hover {
+	background-color: rgba(250, 125, 7, 0.6);
+}
+.feed-button svg {
+	width: 17px;
+	height: 17px;
+	fill: #FFFFFF;
+	vertical-align: -4px;
+	margin: 0 1px 0 0;
+}
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
 .scroll-down {
@@ -751,93 +545,6 @@ a.subscribe-button {
 .archive-template .scroll-down,
 .archive-template .main-header:after {
 	display: none
-}
-
-/* Appears in the top left corner of your home page */
-.blog-logo {
-	display: block;
-	float: left;
-	background: none !important; /* Makes sure there is never a background */
-	border: none !important; /* Makes sure there is never a border */
-}
-
-.blog-logo img {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	display: block;
-	height: 38px;
-	padding: 1px 0 5px 0;
-	width: auto;
-}
-
-.menu-button {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	display: inline-block;
-	float: right;
-	height: 38px;
-	padding: 0 15px;
-	border-style: solid;
-	border-width: 1px;
-	opacity: 1;
-	text-align: center;
-	font-size: 12px;
-	text-transform: uppercase;
-	line-height: 35px;
-	white-space: nowrap;
-	border-radius: 3px;
-	transition: all 0.5s ease;
-}
-.menu-button:before {
-	font-size: 12px;
-	font-weight: bold;
-	margin-right: 6px;
-	position: relative;
-	top: 1px;
-}
-.menu-button:hover {
-	background: #fff;
-}
-.menu-button:focus {
-	outline: 0;
-}
-
-/* When the navigation is closed */
-.nav-closed .menu-button {
-	color: #fff;
-	border-color: rgba(255, 255, 255, 0.6);
-}
-.nav-closed .menu-button:hover {
-	color: #222;
-}
-
-/* When the navigation is closed and there is no cover image */
-.nav-closed .no-cover .menu-button {
-	border-color: #BFC8CD;
-	color: #9EABB3;
-}
-.nav-closed .no-cover .menu-button:hover {
-	border-color: #555;
-	color: #555;
-}
-
-/* When the navigation is opened */
-.nav-opened .menu-button {
-	padding: 0 12px;
-	background: #111;
-	border-color: #111;
-	color: #fff;
-	-webkit-transform: translate3D(94px, 0, 0);
-		-ms-transform: translate3D(94px, 0, 0);
-			transform: translate3D(94px, 0, 0);
-	transition: all 0.3s ease;
-}
-
-.nav-opened .menu-button .word {
-	opacity: 0;
-	transition: all 0.3s ease;
 }
 
 /* Special styles when overlaid on an image*/
@@ -1383,28 +1090,21 @@ body:not(.post-template) .post-title {
 	border-radius: 100%;
 }
 
-.header-links {
+.random-quote {
 	position: absolute;
-	width: 300px;
-	margin-left: -150px;
+	width: 100%;
+	margin-left: -50%;
 	left: 50%;
-	top: 390px;
-	font-family: "Open Sans", sans-serif;
+	top: 376px;
+	font-family: "Merriweather", sans-serif;
+	font-size: 12px;
+	font-style: italic;
 }
-
-.header-links a {
-	font-size: 13px;
-	text-transform: uppercase;
-	margin: 0 8px;
+.random-quote a:hover {
 	color: #1A80CC;
-	text-decoration: none;
-	border-bottom: 0;
-	/*text-shadow: 1px 1px rgba(224, 232, 237, 0.8);*/
-	opacity: 0.8;
 }
-
-.header-links a:hover {
-	opacity: 1;
+.random-quote a:focus {
+	outline: none;
 }
 
 .author-profile .author-image {
@@ -1752,16 +1452,8 @@ body:not(.post-template) .post-title {
 		padding: 2px;
 	}
 
-	.header-links {
-		top: 265px;
-	}
-
-	a.subscribe-button {
-		width: 58px;
-		line-height: 25px;
-	}
-	.subscribe-button:before {
-		margin: 0 5px 0 8px;
+	.random-quote {
+		top: 252px;
 	}
 
 	.scroll-down,
@@ -1901,16 +1593,55 @@ body:not(.post-template) .post-title {
 		padding: 2px;
 	}
 
-	.header-links {
-		top: 206px;
+	.nav {
+		top: 5px;
+		right: 4px;
+	}
+	.nav a {
+		border-radius: 3px;
+		line-height: 30px;
+		height: 30px;
+		overflow: hidden;
+		margin: 0 2px;
+	}
+	a.archives-button {
+		width: 30px;
+		color: rgba(0, 0, 0, 0);
+	}
+	.archives-button svg {
+		width: 18px;
+		height: 18px;
+		margin: 0;
+		vertical-align: -5px;
+	}
+	a.twitter-button {
+		width: 30px;
+		color: rgba(0, 0, 0, 0);
+	}
+	.twitter-button svg {
+		width: 21px;
+		height: 21px;
+		margin: 0 0 0 1px;
+		vertical-align: -7px;
+	}
+	a.feed-button {
+		width: 30px;
+		color: rgba(0, 0, 0, 0);
+	}
+	.feed-button svg {
+		width: 20px;
+		height: 20px;
+		margin: 0 0 0 1px;
+		vertical-align: -7px;
 	}
 
-	a.subscribe-button {
-		width: 56px;
-		line-height: 25px;
+	.random-quote {
+		top: 202px;
+		font-size: 11px;
+		line-height: 18px;
 	}
-	.subscribe-button:before {
-		margin: 0 5px 0 7px;
+	.random-quote a:hover {
+		color: inherit;
 	}
 
 	.no-cover.main-header {
@@ -1928,31 +1659,6 @@ body:not(.post-template) .post-title {
 		margin-bottom: 2rem;
 	}
 
-	.blog-logo {
-		padding: 5px;
-	}
-
-	.blog-logo img {
-		height: 30px;
-	}
-
-	.menu-button {
-		padding: 0 5px;
-		border-radius: 0;
-		border-width: 0;
-		color: #2e2e2e;
-		background: transparent;
-	}
-	.menu-button:hover {
-		color: #2e2e2e;
-		border-color: transparent;
-		background: none;
-	}
-	body.nav-opened .menu-button {
-		background: none;
-		border: transparent;
-	}
-
 	.no-cover .main-nav.overlay {
 		background: none;
 	}
@@ -1966,7 +1672,6 @@ body:not(.post-template) .post-title {
 
 	.nav-title {
 		top: 25px;
-
 	}
 
 	.nav-close {
