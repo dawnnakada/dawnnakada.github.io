@@ -42,6 +42,9 @@ var randomQuotes = [
 	['Songs are good. It is the highest point in the culture that Lilims have created.', 'https://www.youtube.com/watch?v=jYZfeY8Vg0E'],
 	['Keep your head above the mayhem.', 'https://www.youtube.com/watch?v=soflYG6Lhp0'],
 	['In the year 4545 you ain\'t gonna need your teeth, won\'t need your eyes.', 'https://www.youtube.com/watch?v=izQB2-Kmiic'],
+	['I am a man, not a unit of society.', 'https://www.youtube.com/watch?v=CQwgOHyv4TE'],
+	['I was sixteen going nowhere. Will I see seventeen alive?', 'https://www.youtube.com/watch?v=0b6i9LMkRnU'],
+	['From delusion lead me to Truth. From darkness to Light. From death to Immortality.', 'https://www.youtube.com/watch?v=XUbBmX65BQc'],
 	['Mischief managed.', '', 1]
 ];
 
