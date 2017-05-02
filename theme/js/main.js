@@ -9,13 +9,13 @@ var randomQuotes = [
 	['First you\'ve gotta know - not fear, know - that someday you\'re gonna die.', 'https://www.youtube.com/watch?v=e_lSERfLMec'],
 	['Your pretty face is going to hell.', 'https://www.youtube.com/watch?v=DO3b0u6dovk'],
 	['Have you ever seen a portal?', 'https://www.youtube.com/watch?v=keJPaDSVzOs'],
-	['Come, Sweet Death.', 'https://www.youtube.com/watch?v=fyiQEzOY9bU'],
+	['Come, Sweet Death.', 'https://www.youtube.com/watch?v=DK4FTvaW_6Q'],
 	['I am the Alpha and the Omega.', 'https://www.youtube.com/watch?v=3bvPTxPSufs'],
 	['See you space cowboy...', 'https://www.youtube.com/watch?v=NLzpXciijjA'],
 	['What can change the nature of a man?', 'https://www.youtube.com/watch?v=tUt84LyH2JI'],
 	['A perfect immortal machine.', 'https://www.youtube.com/watch?v=5iZMD_eCpEo'],
 	['Death is a disease.', 'https://www.youtube.com/watch?v=rVq5Vy5Gw3U'],
-	['How long did you believe in Santa Claus?', 'https://www.youtube.com/watch?v=M28FX4yV11M'],
+	['How long did you believe in Santa Claus?', 'https://www.youtube.com/watch?v=Kzt3r0hZy5o'],
 	['The future whispered in my ear. Said go ahead and have some fun.', 'https://www.youtube.com/watch?v=luq69m7Sp-g'],
 	['Cybernetic heartbeat. Digital precise.', 'https://www.youtube.com/watch?v=u5U9CYDGnHU'],
 	['The road goes ever on.', 'https://www.youtube.com/watch?v=Ti5OaadrS9I'],
@@ -45,6 +45,7 @@ var randomQuotes = [
 	['I am a man, not a unit of society.', 'https://www.youtube.com/watch?v=CQwgOHyv4TE'],
 	['I was sixteen going nowhere. Will I see seventeen alive?', 'https://www.youtube.com/watch?v=0b6i9LMkRnU'],
 	['From delusion lead me to Truth. From darkness to Light. From death to Immortality.', 'https://www.youtube.com/watch?v=XUbBmX65BQc'],
+	['Good morning, great Moloch. Driving home darkness at the close of the day.', 'https://www.youtube.com/watch?v=xW_4KWXSrgM'],
 	['Mischief managed.', '', 1]
 ];
 
