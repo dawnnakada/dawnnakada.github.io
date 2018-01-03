@@ -5,15 +5,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://dawnnakada.github.io/</loc>
-<lastmod>2018-01-02T20:36:17-00:00</lastmod>
+<lastmod>2018-01-03T22:03:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://dawnnakada.github.io/archives.html</loc>
-<lastmod>2018-01-02T20:36:17-00:00</lastmod>
+<lastmod>2018-01-03T22:03:23-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://dawnnakada.github.io/2017/games</loc>
+<lastmod>2018-01-03T21:05:14+05:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
