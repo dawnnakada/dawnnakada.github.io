@@ -147,7 +147,7 @@ https://www.youtube.com/user/Kurzgesagt/videos
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">codecs</span>
 
-<span class="n">__version__</span> <span class="o">=</span> <span class="s2">"1.1.1"</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s2">"1.2.1"</span>
 
 <span class="n">PLUGIN_INFO</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"file_linebyline"</span><span class="p">,</span>
@@ -158,7 +158,7 @@ https://www.youtube.com/user/Kurzgesagt/videos
 <span class="p">}</span>
 
 
-<span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">settings</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">messages</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">filename</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s2">"filename"</span><span class="p">]</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -175,7 +175,7 @@ https://www.youtube.com/user/Kurzgesagt/videos
 <p>Если <cite>Zephyr</cite> запущен постоянно, то им можно даже пользоваться как планировщиком: периодически заливать файлы на сервер, делать резервное копирование и прочее.</p>
 <p>В ближайших планах у меня написать плагины для почты и персональных лент <cite>Twitter</cite> и <cite>YouTube</cite>. В более неопределенном будущем — подробнее описать структуру плагинов, особенности версионирования, открыть исходный код и сделать другие полезные вещи.</p>
 <p>Код <cite>Zephyr</cite> кроссплатформенный, но для <cite>Linux</cite> и <cite>macOS</cite> билды не оптимизировались. Поэтому выкладываю пока только билд для <cite>Windows</cite> (7 и выше). Для ОС ниже <cite>Windows 10</cite> может понадобиться <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=48145" target="_blank">VC Redist 2015</a>.</p>
-<p><center><img src="/images/information-streams/zephyr-icon.png" style="width: 32px; height: 32px; display: inline; position: static; padding: 0; margin: 0 -10px; vertical-align: middle;"/><a href="https://drive.google.com/open?id=0B-FRVDHUSU1yak5iX2JGcW1xcXc" id="zephyr-download" target="_blank">Zephyr 1.1.1</a></center></p><p>Уже сейчас, без всяких плагинов, мой список подписок насчитывает более 70 каналов. Надеюсь, кому-нибудь приложение пригодится так же, как пригодилось мне.</p>
+<p><center><img src="/images/information-streams/zephyr-icon.png" style="width: 32px; height: 32px; display: inline; position: static; padding: 0; margin: 0 -10px; vertical-align: middle;"/><a href="https://drive.google.com/file/d/1IBXFDnsE7O9VqRv-HgU2XPw0Kz1CVcXT/view" id="zephyr-download" target="_blank">Zephyr 1.2.1</a></center></p><p>Уже сейчас, без всяких плагинов, мой список подписок насчитывает более 70 каналов. Надеюсь, кому-нибудь приложение пригодится так же, как пригодилось мне.</p>
 </div>
 
         </section>
