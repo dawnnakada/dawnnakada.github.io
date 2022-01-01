@@ -5,15 +5,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://dawnnakada.github.io/</loc>
-<lastmod>2021-03-06T11:59:34-00:00</lastmod>
+<lastmod>2022-01-01T19:08:09-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://dawnnakada.github.io/archives.html</loc>
-<lastmod>2021-03-06T11:59:34-00:00</lastmod>
+<lastmod>2022-01-01T19:08:09-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://dawnnakada.github.io/2021/films</loc>
+<lastmod>2022-01-01T19:06:53+05:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
