@@ -91,13 +91,13 @@
 <p>Разговор между Машей и Сашей вряд ли был первым и вряд ли будет последним. Если у Маши частенько есть интересная информация, которой она спешит поделиться, это делает ее постоянным спикером. А у постоянных спикеров могут быть постоянные слушатели.</p>
 <p>Иными словами, Маша создала информационный канал. Ее слушатели превратились в подписчиков, и теперь следуют за ней по пятам и с замиранием сердца ждут от нее... голубиных писем. Или что там у них было в доинформационную эпоху?</p>
 <p>Каналы изначально были очень человечными. Люди объединялись в группы и обменивались информацией с глазу на глаз. Подписчики собирались в кружок и слушали любимого спикера.</p>
-<img alt="prideandprejudice" src="/images/information-streams/prideandprejudice.jpg"/>
+<img alt="prideandprejudice" src="/images/information-streams/prideandprejudice.jpg" />
 <p>Затем начали набирать оборот газеты и журналы, доски с объявлениями, всяческие бюллетени и прочая, и прочая. У канала теперь могло быть больше одного автора, а подписчики могли быть разбросаны по всему миру и следить за каналом с любой точки земного шара. Обмен информацией с глазу на глаз перестал быть основным.</p>
 <p>Сегодня каналы — это то, что люди смотрят по телевизору и слушают по радио. Все новостные ленты и подписки в <cite>Twitter</cite>, <cite>Facebook</cite>, <cite>YouTube</cite>, <cite>Instagram</cite> и прочих сервисах. Часть электронной почты и многие чаты.</p>
 <p>Все эти каналы, вдобавок к обычным «оффлайновым» каналам, не только отнимают наше время, но и формируют нашу информационную среду.</p>
 <blockquote>
 <p>Here’s my theory. If you’re an average well-off person, leading your average well-off life, consuming average well-off media and seeing ads targeted at the average well-off demographic, and going over to your average well-off friends’ houses and seeing their average well-off products, which are you more likely to hear about? A structured-light optical engine for cytological research? Or a juicer?</p>
-<p class="attribution">—<a class="reference external" href="http://slatestarcodex.com/2017/05/11/silicon-valley-a-reality-check/" target="_blank">Scott Alexander</a></p>
+<p class="attribution">&mdash;<a class="reference external" href="http://slatestarcodex.com/2017/05/11/silicon-valley-a-reality-check/" target="_blank">Scott Alexander</a></p>
 </blockquote>
 <p>Если не держать личный список подписок под контролем, то информационная среда превратится в информационное болото. В ней, словно сорняки, будут незаметно появляться каналы, которые не приносят никакой пользы, а только тратят время и отвлекают от других, полезных каналов.</p>
 <p>От некоторых каналов-паразитов можно защититься (спам и рекламу, например, можно блокировать автоматически), но большинство других требует «тестового заезда» — внимательного знакомства или временной подписки, без которых бывает сложно понять ценность канала.</p>
@@ -118,7 +118,7 @@
 <p>Некоторые разработчики не торопятся добавлять подписку на свой ресурс, аргументируя это дополнительными трудозатратами и нагрузкой на сервер. Другие не могут или не хотят составить полную карту каналов, и делают, к примеру, одну-единственную RSS-ленту для всех категорий сайта. А крупные компании бывают настолько одержимы системой аккаунтов, что скрывают инструменты для работы с каналами (а то и часть данных) за регистрацией и закрытым API.</p>
 <p>Кроме того, сам факт наличия нескольких способов подписки ведет к разрозненности. С некоторыми каналами приходится работать на сайте или в специальном приложении, с другими — в RSS-ридере, с третьими — в почтовом клиенте. У четвертых вообще нет подписки, поэтому их нужно проверять вручную или искать обходные пути.</p>
 <p>Это неудобно, это отнимает время и делает работу с личным списком подписок неэффективной. Плюс, меня давно посещала идея объединить все новости и уведомления в одном приложении. Поэтому я решил его написать.</p>
-<img alt="Zephyr" src="/images/information-streams/zephyr.png"/>
+<img alt="Zephyr" src="/images/information-streams/zephyr.png" />
 <p>Начну с того, чем <cite>Zephyr</cite> не является.</p>
 <p><cite>Zephyr</cite> — это не RSS-ридер. Он поддерживает и RSS, и Atom, но не позволяет полноценно отображать содержимое ленты. <cite>Zephyr</cite> — это не десктопный клиент <cite>Twitter</cite> (или других сервисов). Он не интегрирован в его структуру, не позволяет писать и лайкать твиты. Также он не является почтовым клиентом, мессенджером и ответом на главный вопрос жизни, вселенной и всего такого.</p>
 <p><cite>Zephyr</cite> — это центр уведомлений. Его главная задача — кидать пользователю небольшие сообщения при возникновении какого-либо события.</p>
@@ -147,35 +147,35 @@ https://www.youtube.com/user/Kurzgesagt/videos
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">codecs</span>
 
-<span class="n">__version__</span> <span class="o">=</span> <span class="s2">"1.3.1"</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;1.3.1&quot;</span>
 
 <span class="n">PLUGIN_INFO</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"file_linebyline"</span><span class="p">,</span>
-        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"File"</span><span class="p">,</span>
-        <span class="s2">"settings"</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span><span class="s2">"id"</span><span class="p">:</span> <span class="s2">"filename"</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"File"</span><span class="p">,</span> <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"str"</span><span class="p">},</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;file_linebyline&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;File&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;settings&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;filename&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;File&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">},</span>
         <span class="p">]</span>
 <span class="p">}</span>
 
 
 <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">messages</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">filename</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s2">"filename"</span><span class="p">]</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-                <span class="n">error</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"text"</span><span class="p">:</span> <span class="s2">"file '{0}' was not found"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">)}</span>
-                <span class="k">return</span> <span class="p">{</span><span class="s2">"errors"</span><span class="p">:</span> <span class="p">[</span><span class="n">error</span><span class="p">]}</span>
-        <span class="k">with</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="s2">"utf-8"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">error</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;file &#39;</span><span class="si">{0}</span><span class="s2">&#39; was not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">)}</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">error</span><span class="p">]}</span>
+        <span class="k">with</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
                 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
-                        <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"text"</span><span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()})</span>
+                        <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()})</span>
         <span class="n">messages</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
-        <span class="k">return</span> <span class="p">{</span><span class="s2">"messages"</span><span class="p">:</span> <span class="n">messages</span><span class="p">}</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;messages&quot;</span><span class="p">:</span> <span class="n">messages</span><span class="p">}</span>
 </pre></div>
 <p>Плагины, кроме прочего, позволяют снизить сложность использования приложения. Скажем, если добавить специальный плагин для <cite>Twitter</cite>, то от пользователя больше не потребуется знаний CSS — для подписки достаточно будет ввести имя аккаунта.</p>
 <p>Можно создать плагин, который не будет брать информацию из внешних источников, а будет каналом сам по себе. Пример: напоминание о днях рождения и других важных датах.</p>
 <p>Если <cite>Zephyr</cite> запущен постоянно, то им можно даже пользоваться как планировщиком: периодически заливать файлы на сервер, делать резервное копирование и прочее.</p>
 <p>В ближайших планах у меня написать плагины для почты и персональных лент <cite>Twitter</cite> и <cite>YouTube</cite>. В более неопределенном будущем — подробнее описать структуру плагинов, особенности версионирования, открыть исходный код и сделать другие полезные вещи.</p>
 <p>Код <cite>Zephyr</cite> кроссплатформенный, но для <cite>Linux</cite> и <cite>macOS</cite> билды не оптимизировались. Поэтому выкладываю пока только билд для <cite>Windows</cite> (7 и выше). Для ОС ниже <cite>Windows 10</cite> может понадобиться <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=48145" target="_blank">VC Redist 2015</a>.</p>
-<p><center><img src="/images/information-streams/zephyr-icon.png" style="width: 32px; height: 32px; display: inline; position: static; padding: 0; margin: 0 -10px; vertical-align: middle;"/><a href="https://drive.google.com/file/d/1T_Gbu56mquAteUoAKYcF3AykocDgyGgM/view" id="zephyr-download" target="_blank">Zephyr 1.3.1</a></center></p><p>Уже сейчас, без всяких плагинов, мой список подписок насчитывает более 70 каналов. Надеюсь, кому-нибудь приложение пригодится так же, как пригодилось мне.</p>
+<p><center><img style="width: 32px; height: 32px; display: inline; position: static; padding: 0; margin: 0 -10px; vertical-align: middle;" src="/images/information-streams/zephyr-icon.png"/><a id="zephyr-download" href="https://drive.google.com/file/d/1T_Gbu56mquAteUoAKYcF3AykocDgyGgM/view" target="_blank">Zephyr 1.3.1</a></center></p><p>Уже сейчас, без всяких плагинов, мой список подписок насчитывает более 70 каналов. Надеюсь, кому-нибудь приложение пригодится так же, как пригодилось мне.</p>
 </div>
 
         </section>

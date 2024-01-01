@@ -35,7 +35,7 @@
       var selectors = [
         "iframe[src*='player.vimeo.com']",
         "iframe[src*='youtube.com']",
-        "iframe[src*='vid.puffyan.us']",
+        "iframe[src*='inv.makerlab.tech']",
         "iframe[src*='youtube-nocookie.com']",
         "iframe[src*='streamable.com']",
         "iframe[src*='kickstarter.com'][src*='video.html']",
